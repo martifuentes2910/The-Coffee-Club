@@ -137,7 +137,7 @@ h1 {
 /*======== MENU ========*/
 .menu {
   grid-area: menu;
-  background-image: url(../images/menu-bg2.webp);
+  background-image: url(../images/menu-bg.webp);
 
   background-position: right;
   background-attachment: fixed;
