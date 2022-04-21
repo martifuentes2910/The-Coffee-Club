@@ -11,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Allura&family=League+Spartan:wght@300;400&family=Montserrat:wght@400;500&display=swap"
     rel="stylesheet">
-  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="preconnect" href="css/styles.css" as="style">
   <!--CSS and Normalize-->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -25,33 +25,32 @@
 </head>
 
 <body>
-  <!------------------------>
-  <!------- BOTON UP ------->
-  <!------------------------>
-  <a href="#" class="arriba">
-    <i class="fa-solid fa-angle-up"></i>
-  </a>
-
   <div class="grid-container">
+    <!------------------------>
+    <!------- BOTON UP ------->
+    <!------------------------>
+    <a href="#" class="arriba">
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
     <!------------------------>
     <!------ NAVEGACION ------>
     <!------------------------>
     <nav class="grid-item nave">
-      <a class="nav-item" href="#">NOSOTROS</a>
-      <a class="nav-item" href="#">MENU</a>
+      <a class="nav-item" href="#nosotros">NOSOTROS</a>
+      <a class="nav-item" href="#menu">MENU</a>
       <img id="logo" src="images/logo.svg" alt="logo">
-      <a class="nav-item" href="#">TIENDA</a>
-      <a class="nav-item" href="#">CONTACTO</a>
+      <a class="nav-item" href="#store">TIENDA</a>
+      <a class="nav-item" href="#contacto">CONTACTO</a>
     </nav>
     <!------------------------>
     <!-------- HEADER -------->
     <!------------------------>
-    <header class="grid-item header">
-    </header>
+    <header class="grid-item header"></header>
     <!------------------------>
     <!------- NOSOTROS ------->
     <!------------------------>
     <section class="grid-item nosotros">
+      <a name="nosotros"></a>
       <h2 id="cita">~Desde 1988<br>creamos fagancias que alegran tu dia~</h2>
       <div id="line"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie in magna in euismod. Praesent
@@ -63,6 +62,7 @@
     <!--------- MENU --------->
     <!------------------------>
     <section class="grid-item menu">
+      <a name="menu"></a>
       <div class="menu-container">
         <h1>MENU</h1>
         <div class="item1"></div>
@@ -74,19 +74,20 @@
     <!------------------------>
     <!-------- STORE --------->
     <!------------------------>
+
     <section class="grid-item store">
+      <a name="store"></a>
       <h1>TIENDA</h1>
       <div class="store-container">
         <div class="store-item">
           <img id="cafe1" src="images/coffee-1.webp" alt="cafe.1">
         </div>
-        <div class="store-item" id="cafe2">
+        <div id="cafe2" class="store-item" id="cafe2">
           <img src="images/coffee-2.webp" alt="cafe.1">
         </div>
-        <div class="store-item" id="cafe3">
+        <div id="cafe3" class="store-item" id="cafe3">
           <img src="images/coffee-3.webp" alt="cafe.1">
         </div>
-
       </div>
       <button class="boton" href="">VISITA NUESTRO E-SHOP</button>
     </section>
@@ -94,6 +95,7 @@
     <!------- CONTACTO ------->
     <!------------------------>
     <section class="grid-item contacto">
+      <a name="contacto"></a>
       <img id="contact-logo" src="images/logo.svg" alt="logo">
       <!------------------------>
       <!--------- FORM --------->
@@ -121,7 +123,7 @@
       <!------------------------>
       <!--------- MAPA --------->
       <!------------------------>
-      <div class="map-container"><iframe id="mapa"
+      <div class="map-container"><iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7726745055825!2d-58.42511428434784!3d-34.584618163995664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb56d3afd5cbd%3A0x98f65559280c1a17!2sCoffee%20Club%20BA!5e0!3m2!1ses!2sar!4v1650058508657!5m2!1ses!2sar"
           width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">Mapa</iframe>
