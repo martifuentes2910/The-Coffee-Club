@@ -79,15 +79,21 @@
       <a name="store"></a>
       <h1>TIENDA</h1>
       <div class="store-container">
-        <div class="store-item">
-          <img id="cafe1" src="images/coffee-1.webp" alt="cafe.1">
+        <i class="fa-solid fa-angle-left"></i>
+        <div id="cafe1" class="store-item">
+
+          <img src="images/coffee-1.webp" alt="cafe.1">
+          <p>KENYA 4/4</p>
         </div>
         <div id="cafe2" class="store-item" id="cafe2">
           <img src="images/coffee-2.webp" alt="cafe.1">
+          <p>ETHIOPIA 2/24</p>
         </div>
         <div id="cafe3" class="store-item" id="cafe3">
           <img src="images/coffee-3.webp" alt="cafe.1">
+          <p>ETHIOPIA 2/24 + CUP</p>
         </div>
+        <i class="fa-solid fa-angle-right"></i>
       </div>
       <button class="boton" href="">VISITA NUESTRO E-SHOP</button>
     </section>
@@ -102,7 +108,7 @@
       <!------------------------>
       <div class="container-md">
         <form class="row g-3 form">
-          <label>CONTACTO</label>
+          <div class="col-md-12"><label>CONTACTO</label></div>
           <div class="col-md-6">
             <input class="form-control" id="form-input__name" type="text" placeholder="Nombre" required>
           </div>
@@ -115,8 +121,8 @@
           <div class="col-md-12">
             <textarea class="form-control" id="form-textarea" rows="11" required></textarea>
           </div>
-          <div class="row g-2 justify-content-end">
-            <button type="submit" id="form-button">ENVIAR</button>
+          <div class="col-sm-12 d-flex justify-content-end ">
+            <button type=" submit" id="form-button">ENVIAR</button>
           </div>
         </form>
       </div>
@@ -137,10 +143,10 @@
     <!------------------------>
     <footer class="grid-item footer">
       <div class="icon-container">
-        <a href=""><i class="icons fa-brands fa-whatsapp"></i></a>
-        <a href=""><i class="icons fa-brands fa-instagram"></i></a>
-        <a href=""><i class="icons fa-brands fa-facebook-f"></i></a>
-        <a href=""><i class="icons fa-brands fa-twitter"></i></a>
+        <a><i class="icons fa-brands fa-whatsapp"></i></a>
+        <a><i class="icons fa-brands fa-instagram"></i></a>
+        <a><i class="icons fa-brands fa-facebook-f"></i></a>
+        <a><i class="icons fa-brands fa-twitter"></i></a>
       </div>
       <span id="copy">© 2022 Todos los derechos reservados. THE COFFEE CLUB.</span>
     </footer>

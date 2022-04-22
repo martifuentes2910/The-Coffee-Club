@@ -57,6 +57,7 @@ h1 {
   color: white;
   font-size: 2.5em;
   background-color: #191919;
+  z-index: 100;
 }
 .fa-angle-up {
   color: var(--secundario);
@@ -224,16 +225,37 @@ h1 {
   margin-bottom: 60px;
 }
 .store-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 400px;
-  border: 1px solid white;
+  border: 2px solid var(--secundario);
   margin: 1em;
 }
+.store-item p {
+  position: absolute;
+  font-weight: 400;
+  color: white;
+  font-size: 1.3em;
+}
+.store-container .store-item p {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.store-container .store-item:hover p {
+  transition: all 0.5s;
+  opacity: 1;
+  visibility: visible;
+}
 .store-item:hover {
-  filter: grayscale(90%) blur(1px);
-  transform: scale(1.04);
+  cursor: pointer;
+  filter: grayscale(90%);
+  transform: scale(1.05);
   transition: all 0.45s;
 }
+
 .store-item img {
   width: 100%;
   height: 100%;
@@ -242,6 +264,13 @@ h1 {
 .store .boton {
   align-self: center;
   margin-bottom: 2em;
+}
+
+.fa-angle-left::before,
+.fa-angle-right::before {
+  cursor: pointer;
+  color: var(--secundario);
+  font-size: 2em;
 }
 
 /*======== CONTACTO ========*/
@@ -298,13 +327,11 @@ h1 {
 }
 
 .form label {
-  border-bottom: 1px solid var(--secundario);
   padding: 0.5em;
   color: white;
   font-weight: 500;
   letter-spacing: 0.09em;
   font-size: 1.2em;
-  margin-left: 0.5em;
   max-width: 702px;
 }
 
@@ -418,12 +445,9 @@ h1 {
   }
 
   .form label {
-    width: 1fr;
     margin: 0;
   }
-  .store-container {
-    overflow: hidden;
-  }
+
   .map-container iframe {
     width: 80vw;
     height: 1005;
@@ -465,7 +489,7 @@ h1 {
 
   .nosotros p {
     line-height: 2em;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   #form-button {
