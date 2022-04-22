@@ -45,6 +45,11 @@ h1 {
   font-weight: 400;
   color: whitesmoke;
 }
+h2 {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 300;
+  color: whitesmoke;
+}
 
 /*======== UP-BUTTON ========*/
 .arriba {
@@ -164,28 +169,74 @@ h1 {
   justify-self: center;
   grid-column: 1/11;
 }
-
 .item1 {
   background-color: #182023;
   border-radius: 0px 53px 53px 0px;
-  height: 25em;
   grid-row: 2/3;
-  grid-column: 1/7;
+  grid-column: 1/8;
 }
 .item2 {
   background-color: #111416;
   border-radius: 53px 0px 0px 53px;
-  height: 25em;
   grid-row: 3/4;
-  grid-column: 5/11;
+  grid-column: 4/11;
 }
 .item3 {
   background-color: #182023;
   grid-row: 4/5;
-  grid-column: 1/7;
-  height: 25em;
+  grid-column: 1/8;
   border-radius: 0px 53px 53px 0px;
 }
+.item1,
+.item2,
+.item3 {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.texto-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item1 h2,
+.item2 h2,
+.item3 h2 {
+  font-size: 2em;
+  letter-spacing: 0.09em;
+  margin-top: 1em;
+}
+.item1 p,
+.item2 p,
+.item3 p {
+  font-size: 1.2em;
+  margin: 2em;
+}
+.item1 p,
+.item3 p {
+  text-align: left;
+}
+.item2 p {
+  text-align: right;
+}
+.item2 img {
+  order: -1;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+.item1 img,
+.item3 img {
+  justify-self: flex-end;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .boton {
   grid-row: 5/6;
   grid-column: 1/11;
@@ -383,12 +434,20 @@ h1 {
   text-align: center;
 }
 /*======== MEDIA QUERIES ========*/
+
 @media screen and (max-width: 992px) {
   #cafe3 {
     display: none;
   }
 }
+
 @media screen and (max-width: 768px) {
+  .item1 p,
+  .item2 p,
+  .item3 p {
+    font-size: 0.8em;
+  }
+
   .header {
     background-position: center;
     height: 30em;
@@ -462,8 +521,24 @@ h1 {
   .footer {
     width: 100%;
   }
+  .item1,
+  .item2,
+  .item3 {
+    grid-column: 1/11;
+    border-radius: 0;
+  }
 }
 @media screen and (max-width: 576px) {
+  .item1 h2,
+  .item2 h2,
+  .item3 h2 {
+    font-size: 1.5em;
+  }
+  .item1 p,
+  .item2 p,
+  .item3 p {
+    font-size: 0.6em;
+  }
   .form label {
     margin: 0;
   }
@@ -473,12 +548,7 @@ h1 {
   .header {
     height: 20em;
   }
-  .item1,
-  .item2,
-  .item3 {
-    grid-column: 1/11;
-    border-radius: 0;
-  }
+
   .menu-container {
     row-gap: 3em;
   }
