@@ -15,6 +15,8 @@
   <!--CSS and Normalize-->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Javascript -->
+  <script src="js/index.js"></script>
   <!--FontAwesome Icons-->
   <script src="https://kit.fontawesome.com/d8ae5afb92.js" crossorigin="anonymous"></script>
   <!-- Bootstrap CSS -->
@@ -135,22 +137,22 @@
       <!--------- FORM --------->
       <!------------------------>
       <div class="container-md">
-        <form class="row g-3 form">
+        <form action="" name="formulario" method="get" class="row g-3 form">
           <div class="col-md-12"><label>CONTACTO</label></div>
           <div class="col-md-6">
-            <input class="form-control" id="form-input__name" type="text" placeholder="Nombre" required>
+            <input class="form-control" name="texto" id="form-input__name" type="text" placeholder="Nombre">
           </div>
           <div class="col-md-6">
-            <input class="form-control" id="form-input__email" type="email" placeholder="E-mail" required>
+            <input class="form-control" name="texto" id="form-input__email" type="email" placeholder="E-mail">
           </div>
           <div class="col-md-12">
-            <input class="form-control" id="form-input__asunto" type="text" placeholder="Asunto" required>
+            <input class="form-control" name="texto" id="form-input__asunto" type="text" placeholder="Asunto">
           </div>
           <div class="col-md-12">
-            <textarea class="form-control" id="form-textarea" rows="11" required></textarea>
+            <textarea class="form-control" name="texto" id="form-textarea" rows="11"></textarea>
           </div>
           <div class="col-sm-12 d-flex justify-content-end ">
-            <button type=" submit" id="form-button">ENVIAR</button>
+            <button type="submit" name="submit" id="form-button">ENVIAR</button>
           </div>
         </form>
       </div>
@@ -177,6 +179,7 @@
         <a href=""> <i class="icons fa-brands fa-twitter"></i></a>
       </div>
       <span id="copy">© 2022 Todos los derechos reservados. THE COFFEE CLUB.</span>
+      <span id="copy">╰☆☆ 𝕸𝖆𝖉𝖊 𝖜𝖎𝖙𝖍 ❤ 𝖇𝖞 𝕸𝖆𝖗𝖙𝖎 ☆☆╮</span>
     </footer>
   </div>
 
