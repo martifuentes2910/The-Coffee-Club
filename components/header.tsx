@@ -34,18 +34,20 @@ export function Header() {
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground/70 hover:text-foreground transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        <div className="flex h-20 items-center">
+          {/* Mobile Menu Button - Left */}
+          <div className="flex items-center justify-start w-10 lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-foreground/70 hover:text-foreground transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
 
           {/* Desktop Navigation - Left */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8 flex-1">
             <Link
               href="#nosotros"
               className="text-sm font-medium tracking-wider text-foreground/70 hover:text-primary transition-colors"
@@ -53,7 +55,7 @@ export function Header() {
               NOSOTROS
             </Link>
             <Link
-              href="#menu"
+              href="/menu"
               className="text-sm font-medium tracking-wider text-foreground/70 hover:text-primary transition-colors"
             >
               MENU
@@ -61,7 +63,7 @@ export function Header() {
           </div>
 
           {/* Logo - Center */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center justify-center flex-1 lg:flex-none">
             <Image
               src="/images/logo.svg"
               alt="The Coffee Club"
@@ -73,7 +75,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation - Right */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center justify-end gap-8 flex-1">
             <Link
               href="#tienda"
               className="text-sm font-medium tracking-wider text-foreground/70 hover:text-primary transition-colors"
@@ -88,22 +90,24 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Cart Button */}
-          <button
-            onClick={toggleCart}
-            className="relative p-2 text-foreground/70 hover:text-foreground transition-colors group"
-            aria-label="Abrir carrito"
-          >
-            <ShoppingBag
-              size={24}
-              className="group-hover:scale-110 transition-transform"
-            />
-            {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground">
-                {totalItems}
-              </span>
-            )}
-          </button>
+          {/* Cart Button - Right */}
+          <div className="flex items-center justify-end w-10">
+            <button
+              onClick={toggleCart}
+              className="relative p-2 text-foreground/70 hover:text-foreground transition-colors group"
+              aria-label="Abrir carrito"
+            >
+              <ShoppingBag
+                size={24}
+                className="group-hover:scale-110 transition-transform"
+              />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground">
+                  {totalItems}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
