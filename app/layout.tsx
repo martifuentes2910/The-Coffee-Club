@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${playfair.variable}`}>
+    <html lang="es" data-scroll-behavior="smooth" className={`${montserrat.variable} ${playfair.variable}`}>
       <body className="font-sans">{children}</body>
     </html>
   );

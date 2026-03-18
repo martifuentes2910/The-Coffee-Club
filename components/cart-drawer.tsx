@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { X, Plus, Minus, ShoppingBag, Trash2 } from "lucide-react";
+import Link from "next/link";
+import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight } from "lucide-react";
 import { useCartStore } from "@/lib/store";
 import { formatPrice, cn } from "@/lib/utils";
 
@@ -89,6 +90,7 @@ export function CartDrawer() {
                       src={item.product.image}
                       alt={item.product.name}
                       fill
+                      sizes="80px"
                       className="object-cover"
                     />
                   </div>
@@ -156,9 +158,14 @@ export function CartDrawer() {
             <p className="text-xs text-muted-foreground">
               Envio calculado en el checkout
             </p>
-            <button className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+            <Link
+              href="/checkout"
+              onClick={closeCart}
+              className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+            >
               Finalizar Compra
-            </button>
+              <ArrowRight size={18} />
+            </Link>
             <button
               onClick={clearCart}
               className="w-full text-muted-foreground py-2 text-sm hover:text-foreground transition-colors"

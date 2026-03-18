@@ -31,6 +31,7 @@ export function Menu() {
           src="/images/menu-bg.webp"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
@@ -63,6 +64,7 @@ export function Menu() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

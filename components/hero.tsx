@@ -11,6 +11,7 @@ export function Hero() {
           src="/images/hero2.webp"
           alt="Coffee Club ambiance"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
